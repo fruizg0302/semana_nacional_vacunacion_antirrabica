@@ -19,10 +19,11 @@ gem 'mysql2', '~> 0.3.16'
 gem 'cancan', '~> 1.6.10'
 gem 'tiny_tds', '~> 0.5.1'
 gem 'activerecord-sqlserver-adapter', '~> 4.1.0'
-
+gem 'jquery-turbolinks'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'jquery-validation-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

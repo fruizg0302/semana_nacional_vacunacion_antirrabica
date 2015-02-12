@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150212013457) do
+ActiveRecord::Schema.define(version: 20150212163459) do
 
   create_table "eight_annexes", force: true do |t|
     t.integer  "perros_estimados"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150212013457) do
     t.string   "state_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "imss_prospera"
   end
 
   create_table "users", force: true do |t|
@@ -57,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150212013457) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "state_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

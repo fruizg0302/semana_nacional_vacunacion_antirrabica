@@ -13,56 +13,59 @@
 
   <div class="field">
     <%= f.label :perros_estimados %><br>
-    <%= f.number_field :perros_estimados %>
+    <%= f.number_field :perros_estimados, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :gatos_estimados %><br>
-    <%= f.number_field :gatos_estimados %>
+    <%= f.number_field :gatos_estimados, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :total_estimados %><br>
-    <%= f.number_field :total_estimados %>
+    <%= f.number_field :total_estimados, :readonly => true %>
   </div>
   <div class="field">
     <%= f.label :perros_por_vacunar %><br>
-    <%= f.number_field :perros_por_vacunar %>
+    <%= f.number_field :perros_por_vacunar, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :gatos_por_vacunar %><br>
-    <%= f.number_field :gatos_por_vacunar %>
+    <%= f.number_field :gatos_por_vacunar, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :total_por_vacunar %><br>
-    <%= f.number_field :total_por_vacunar %>
+    <%= f.number_field :total_por_vacunar, :readonly => true %>
   </div>
   <div class="field">
     <%= f.label :perros_vsn %><br>
-    <%= f.number_field :perros_vsn %>
+    <%= f.number_field :perros_vsn, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :gatos_vsn %><br>
-    <%= f.number_field :gatos_vsn %>
+    <%= f.number_field :gatos_vsn, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :total_vsn %><br>
-    <%= f.number_field :total_vsn %>
+    <%= f.number_field :total_vsn, :readonly => true %>
   </div>
   <div class="field">
     <%= f.label :brigadas_dia %><br>
-    <%= f.number_field :brigadas_dia %>
+    <%= f.number_field :brigadas_dia, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :puestos_fijos %><br>
-    <%= f.number_field :puestos_fijos %>
+    <%= f.number_field :puestos_fijos, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :numero_de_dias %><br>
-    <%= f.number_field :numero_de_dias %>
+    <%= f.number_field :numero_de_dias, :value => 0%>
   </div>
+
   <div class="field">
-    <%= f.label :jurisdiction_id %><br>
-    <%= f.number_field :jurisdiction_id %>
+    <%= f.label "Jurisdicción sanitaria" %> <br>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.where("state_id = ?", current_user.state_id), :id, :jurisdiction_name, include_blank:false%>
   </div>
+  <br>
+
   <div class="actions">
     <%= f.submit %>
   </div>
