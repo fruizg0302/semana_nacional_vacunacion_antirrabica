@@ -1,0 +1,69 @@
+<%= form_for(@eight_annex) do |f| %>
+  <% if @eight_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eight_annex.errors.count, "error") %> prohibited this eight_annex from being saved:</h2>
+
+      <ul>
+      <% @eight_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :perros_estimados %><br>
+    <%= f.number_field :perros_estimados %>
+  </div>
+  <div class="field">
+    <%= f.label :gatos_estimados %><br>
+    <%= f.number_field :gatos_estimados %>
+  </div>
+  <div class="field">
+    <%= f.label :total_estimados %><br>
+    <%= f.number_field :total_estimados %>
+  </div>
+  <div class="field">
+    <%= f.label :perros_por_vacunar %><br>
+    <%= f.number_field :perros_por_vacunar %>
+  </div>
+  <div class="field">
+    <%= f.label :gatos_por_vacunar %><br>
+    <%= f.number_field :gatos_por_vacunar %>
+  </div>
+  <div class="field">
+    <%= f.label :total_por_vacunar %><br>
+    <%= f.number_field :total_por_vacunar %>
+  </div>
+  <div class="field">
+    <%= f.label :perros_vsn %><br>
+    <%= f.number_field :perros_vsn %>
+  </div>
+  <div class="field">
+    <%= f.label :gatos_vsn %><br>
+    <%= f.number_field :gatos_vsn %>
+  </div>
+  <div class="field">
+    <%= f.label :total_vsn %><br>
+    <%= f.number_field :total_vsn %>
+  </div>
+  <div class="field">
+    <%= f.label :brigadas_dia %><br>
+    <%= f.number_field :brigadas_dia %>
+  </div>
+  <div class="field">
+    <%= f.label :puestos_fijos %><br>
+    <%= f.number_field :puestos_fijos %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_de_dias %><br>
+    <%= f.number_field :numero_de_dias %>
+  </div>
+  <div class="field">
+    <%= f.label :jurisdiction_id %><br>
+    <%= f.number_field :jurisdiction_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

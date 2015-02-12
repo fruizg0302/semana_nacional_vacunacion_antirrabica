@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  perros_estimados: 1
+  gatos_estimados: 1
+  total_estimados: 1
+  perros_por_vacunar: 1
+  gatos_por_vacunar: 1
+  total_por_vacunar: 1
+  perros_vsn: 1
+  gatos_vsn: 1
+  total_vsn: 1
+  brigadas_dia: 1
+  puestos_fijos: 1
+  numero_de_dias: 1
+  jurisdiction_id: 1
+
+two:
+  perros_estimados: 1
+  gatos_estimados: 1
+  total_estimados: 1
+  perros_por_vacunar: 1
+  gatos_por_vacunar: 1
+  total_por_vacunar: 1
+  perros_vsn: 1
+  gatos_vsn: 1
+  total_vsn: 1
+  brigadas_dia: 1
+  puestos_fijos: 1
+  numero_de_dias: 1
+  jurisdiction_id: 1
