@@ -35,10 +35,10 @@
         <td><%= eight_annex.brigadas_dia %></td>
         <td><%= eight_annex.puestos_fijos %></td>
         <td><%= eight_annex.numero_de_dias %></td>
-        <td><%= eight_annex.jurisdiction_id %></td>
-        <td><%= link_to 'Show', eight_annex %></td>
-        <td><%= link_to 'Edit', edit_eight_annex_path(eight_annex) %></td>
-        <td><%= link_to 'Destroy', eight_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= Jurisdiction.find(eight_annex.jurisdiction_id).jurisdiction_name %></td>
+        <td><%= link_to 'Mostrar', eight_annex %></td>
+        <td><%= link_to 'Editar', edit_eight_annex_path(eight_annex) %></td>
+        <td><%= link_to 'Eliminar', eight_annex, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
