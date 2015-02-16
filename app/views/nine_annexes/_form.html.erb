@@ -1,0 +1,53 @@
+<%= form_for(@nine_annex) do |f| %>
+  <% if @nine_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nine_annex.errors.count, "error") %> prohibited this nine_annex from being saved:</h2>
+
+      <ul>
+      <% @nine_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero_municipios %><br>
+    <%= f.number_field :numero_municipios %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_municipios_imss_prospera %><br>
+    <%= f.number_field :numero_municipios_imss_prospera %>
+  </div>
+  <div class="field">
+    <%= f.label :universo_perros_imss_prospera %><br>
+    <%= f.number_field :universo_perros_imss_prospera %>
+  </div>
+  <div class="field">
+    <%= f.label :universo_gatos_imss_prospera %><br>
+    <%= f.number_field :universo_gatos_imss_prospera %>
+  </div>
+  <div class="field">
+    <%= f.label :universo_total_imss_prospera %><br>
+    <%= f.number_field :universo_total_imss_prospera %>
+  </div>
+  <div class="field">
+    <%= f.label :perros_vacunar_imss_prospera %><br>
+    <%= f.number_field :perros_vacunar_imss_prospera %>
+  </div>
+  <div class="field">
+    <%= f.label :gatos_vacunar_imss_prospera %><br>
+    <%= f.number_field :gatos_vacunar_imss_prospera %>
+  </div>
+  <div class="field">
+    <%= f.label :total_vacunar_imss_prospera %><br>
+    <%= f.number_field :total_vacunar_imss_prospera %>
+  </div>
+  <div class="field">
+    <%= f.label :jurisdiction_id %><br>
+    <%= f.number_field :jurisdiction_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

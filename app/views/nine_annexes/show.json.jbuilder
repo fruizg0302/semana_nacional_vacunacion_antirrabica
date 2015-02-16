@@ -1,0 +1,1 @@
+json.extract! @nine_annex, :id, :numero_municipios, :numero_municipios_imss_prospera, :universo_perros_imss_prospera, :universo_gatos_imss_prospera, :universo_total_imss_prospera, :perros_vacunar_imss_prospera, :gatos_vacunar_imss_prospera, :total_vacunar_imss_prospera, :jurisdiction_id, :created_at, :updated_at

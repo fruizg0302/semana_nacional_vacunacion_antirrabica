@@ -1,4 +1,4 @@
 class Jurisdiction < ActiveRecord::Base
   belongs_to :state
-  has_many :eigth_annexes
+  has_many :eight_annexes
 end
