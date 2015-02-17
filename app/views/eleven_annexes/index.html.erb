@@ -28,9 +28,9 @@
         <td><%= eleven_annex.jeringas %></td>
         <td><%= eleven_annex.thermos %></td>
         <td><%= Jurisdiction.find(eleven_annex.jurisdiction_id).jurisdiction_name %></td>
-        <td><%= link_to 'Show', eleven_annex %></td>
-        <td><%= link_to 'Edit', edit_eleven_annex_path(eleven_annex) %></td>
-        <td><%= link_to 'Destroy', eleven_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', eleven_annex %></td>
+        <td><%= link_to 'Editar', edit_eleven_annex_path(eleven_annex) %></td>
+        <td><%= link_to 'Eliminar', eleven_annex, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
