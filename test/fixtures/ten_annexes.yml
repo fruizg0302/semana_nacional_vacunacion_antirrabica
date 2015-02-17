@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sesa_personas: 1
+  estados_municipios_personas: 1
+  sedena_semar: 1
+  sagarpa_personas: 1
+  escuelas_veterinarias_personas: 1
+  grupos_comunidad_personas: 1
+  voluntarios_personas: 1
+  otros_personas: 1
+  imss_prospera_personas: 1
+  total_personas: 1
+  jurisdiction_id: 1
+
+two:
+  sesa_personas: 1
+  estados_municipios_personas: 1
+  sedena_semar: 1
+  sagarpa_personas: 1
+  escuelas_veterinarias_personas: 1
+  grupos_comunidad_personas: 1
+  voluntarios_personas: 1
+  otros_personas: 1
+  imss_prospera_personas: 1
+  total_personas: 1
+  jurisdiction_id: 1

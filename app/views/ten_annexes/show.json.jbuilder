@@ -1,0 +1,1 @@
+json.extract! @ten_annex, :id, :sesa_personas, :estados_municipios_personas, :sedena_semar, :sagarpa_personas, :escuelas_veterinarias_personas, :grupos_comunidad_personas, :voluntarios_personas, :otros_personas, :imss_prospera_personas, :total_personas, :jurisdiction_id, :created_at, :updated_at

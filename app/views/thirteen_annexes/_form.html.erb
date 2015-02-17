@@ -1,0 +1,101 @@
+<%= form_for(@thirteen_annex) do |f| %>
+  <% if @thirteen_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@thirteen_annex.errors.count, "error") %> prohibited this thirteen_annex from being saved:</h2>
+
+      <ul>
+      <% @thirteen_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero_cds_dist %><br>
+    <%= f.number_field :numero_cds_dist %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_cd_perifoneo_dist %><br>
+    <%= f.number_field :numero_cd_perifoneo_dist %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_carteles_dist %><br>
+    <%= f.number_field :numero_carteles_dist %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_cds_local %><br>
+    <%= f.number_field :numero_cds_local %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_cd_perifoneo_local %><br>
+    <%= f.number_field :numero_cd_perifoneo_local %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_carteles_local %><br>
+    <%= f.number_field :numero_carteles_local %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_estaciones_am %><br>
+    <%= f.number_field :numero_estaciones_am %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_estaciones_fm %><br>
+    <%= f.number_field :numero_estaciones_fm %>
+  </div>
+  <div class="field">
+    <%= f.label :total_estaciones %><br>
+    <%= f.number_field :total_estaciones %>
+  </div>
+  <div class="field">
+    <%= f.label :promedio_impactos_dia %><br>
+    <%= f.number_field :promedio_impactos_dia %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_inicio_difusion %><br>
+    <%= f.date_select :fecha_inicio_difusion %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_termino_difusion %><br>
+    <%= f.date_select :fecha_termino_difusion %>
+  </div>
+  <div class="field">
+    <%= f.label :promedio_dias_difusion %><br>
+    <%= f.number_field :promedio_dias_difusion %>
+  </div>
+  <div class="field">
+    <%= f.label :equipo_perifoneo_oficial %><br>
+    <%= f.number_field :equipo_perifoneo_oficial %>
+  </div>
+  <div class="field">
+    <%= f.label :equipo_perifoneo_privado %><br>
+    <%= f.number_field :equipo_perifoneo_privado %>
+  </div>
+  <div class="field">
+    <%= f.label :equipo_perifoneo_total %><br>
+    <%= f.number_field :equipo_perifoneo_total %>
+  </div>
+  <div class="field">
+    <%= f.label :promedio_horas_difusion %><br>
+    <%= f.number_field :promedio_horas_difusion %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_inicio_difusion_perifoneo_local %><br>
+    <%= f.date_select :fecha_inicio_difusion_perifoneo_local %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_termino_difusion_perifoneo_local %><br>
+    <%= f.date_select :fecha_termino_difusion_perifoneo_local %>
+  </div>
+  <div class="field">
+    <%= f.label :promedio_dias_perifoneo %><br>
+    <%= f.number_field :promedio_dias_perifoneo %>
+  </div>
+  <div class="field">
+    <%= f.label :jurisdiction_id %><br>
+    <%= f.number_field :jurisdiction_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

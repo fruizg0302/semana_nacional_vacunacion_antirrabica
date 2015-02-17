@@ -1,4 +1,4 @@
-<h1>Listing nine_annexes</h1>
+<h1>Listado de tus capturas del Anexo 9</h1>
 
 <table>
   <thead>
@@ -27,7 +27,7 @@
         <td><%= nine_annex.perros_vacunar_imss_prospera %></td>
         <td><%= nine_annex.gatos_vacunar_imss_prospera %></td>
         <td><%= nine_annex.total_vacunar_imss_prospera %></td>
-        <td><%= nine_annex.jurisdiction_id %></td>
+        <td><%= Jurisdiction.find(nine_annex.jurisdiction_id).jurisdiction_name %></td>
         <td><%= link_to 'Show', nine_annex %></td>
         <td><%= link_to 'Edit', edit_nine_annex_path(nine_annex) %></td>
         <td><%= link_to 'Destroy', nine_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Nine annex', new_nine_annex_path %>
+<%= link_to 'Nuevo registro del Anexo 9', new_nine_annex_path %>

@@ -63,7 +63,7 @@
 
   <div class="field">
     <%= f.label "Jurisdicción sanitaria" %> <br>
-    <%= f.collection_select :jurisdiction_id, Jurisdiction.where("state_id = ?", current_user.state_id), :id, :jurisdiction_name, include_blank:false%>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.find(EightAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
   </div>
   <br>
 

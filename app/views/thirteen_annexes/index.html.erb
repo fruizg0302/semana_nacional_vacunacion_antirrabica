@@ -1,0 +1,65 @@
+<h1>Listing thirteen_annexes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero cds dist</th>
+      <th>Numero cd perifoneo dist</th>
+      <th>Numero carteles dist</th>
+      <th>Numero cds local</th>
+      <th>Numero cd perifoneo local</th>
+      <th>Numero carteles local</th>
+      <th>Numero estaciones am</th>
+      <th>Numero estaciones fm</th>
+      <th>Total estaciones</th>
+      <th>Promedio impactos dia</th>
+      <th>Fecha inicio difusion</th>
+      <th>Fecha termino difusion</th>
+      <th>Promedio dias difusion</th>
+      <th>Equipo perifoneo oficial</th>
+      <th>Equipo perifoneo privado</th>
+      <th>Equipo perifoneo total</th>
+      <th>Promedio horas difusion</th>
+      <th>Fecha inicio difusion perifoneo local</th>
+      <th>Fecha termino difusion perifoneo local</th>
+      <th>Promedio dias perifoneo</th>
+      <th>Jurisdiction</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thirteen_annexes.each do |thirteen_annex| %>
+      <tr>
+        <td><%= thirteen_annex.numero_cds_dist %></td>
+        <td><%= thirteen_annex.numero_cd_perifoneo_dist %></td>
+        <td><%= thirteen_annex.numero_carteles_dist %></td>
+        <td><%= thirteen_annex.numero_cds_local %></td>
+        <td><%= thirteen_annex.numero_cd_perifoneo_local %></td>
+        <td><%= thirteen_annex.numero_carteles_local %></td>
+        <td><%= thirteen_annex.numero_estaciones_am %></td>
+        <td><%= thirteen_annex.numero_estaciones_fm %></td>
+        <td><%= thirteen_annex.total_estaciones %></td>
+        <td><%= thirteen_annex.promedio_impactos_dia %></td>
+        <td><%= thirteen_annex.fecha_inicio_difusion %></td>
+        <td><%= thirteen_annex.fecha_termino_difusion %></td>
+        <td><%= thirteen_annex.promedio_dias_difusion %></td>
+        <td><%= thirteen_annex.equipo_perifoneo_oficial %></td>
+        <td><%= thirteen_annex.equipo_perifoneo_privado %></td>
+        <td><%= thirteen_annex.equipo_perifoneo_total %></td>
+        <td><%= thirteen_annex.promedio_horas_difusion %></td>
+        <td><%= thirteen_annex.fecha_inicio_difusion_perifoneo_local %></td>
+        <td><%= thirteen_annex.fecha_termino_difusion_perifoneo_local %></td>
+        <td><%= thirteen_annex.promedio_dias_perifoneo %></td>
+        <td><%= thirteen_annex.jurisdiction_id %></td>
+        <td><%= link_to 'Show', thirteen_annex %></td>
+        <td><%= link_to 'Edit', edit_thirteen_annex_path(thirteen_annex) %></td>
+        <td><%= link_to 'Destroy', thirteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thirteen annex', new_thirteen_annex_path %>

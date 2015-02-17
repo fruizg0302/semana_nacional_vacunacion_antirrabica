@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_frascos: 1
+  numero_dosis: 1
+  placas: 1
+  chinchos: 1
+  comprobantes_cartillas: 1
+  agujas: 1
+  jeringas: 1
+  thermos: 1
+  jurisdiction_id: 1
+
+two:
+  numero_frascos: 1
+  numero_dosis: 1
+  placas: 1
+  chinchos: 1
+  comprobantes_cartillas: 1
+  agujas: 1
+  jeringas: 1
+  thermos: 1
+  jurisdiction_id: 1

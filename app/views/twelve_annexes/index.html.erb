@@ -1,0 +1,53 @@
+<h1>Listing twelve_annexes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Difusion acumulado total</th>
+      <th>Carteles</th>
+      <th>Volantes</th>
+      <th>Folletos</th>
+      <th>Tripticos</th>
+      <th>Spots tv</th>
+      <th>Spots radio</th>
+      <th>Entrevistas tv</th>
+      <th>Entrevistas radio</th>
+      <th>Platicas</th>
+      <th>Horas perifoneo</th>
+      <th>Cunas periodisticas</th>
+      <th>Pinta bardas</th>
+      <th>Mantas</th>
+      <th>Jurisdiction</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twelve_annexes.each do |twelve_annex| %>
+      <tr>
+        <td><%= twelve_annex.difusion_acumulado_total %></td>
+        <td><%= twelve_annex.carteles %></td>
+        <td><%= twelve_annex.volantes %></td>
+        <td><%= twelve_annex.folletos %></td>
+        <td><%= twelve_annex.tripticos %></td>
+        <td><%= twelve_annex.spots_tv %></td>
+        <td><%= twelve_annex.spots_radio %></td>
+        <td><%= twelve_annex.entrevistas_tv %></td>
+        <td><%= twelve_annex.entrevistas_radio %></td>
+        <td><%= twelve_annex.platicas %></td>
+        <td><%= twelve_annex.horas_perifoneo %></td>
+        <td><%= twelve_annex.cunas_periodisticas %></td>
+        <td><%= twelve_annex.pinta_bardas %></td>
+        <td><%= twelve_annex.mantas %></td>
+        <td><%= twelve_annex.jurisdiction_id %></td>
+        <td><%= link_to 'Show', twelve_annex %></td>
+        <td><%= link_to 'Edit', edit_twelve_annex_path(twelve_annex) %></td>
+        <td><%= link_to 'Destroy', twelve_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Twelve annex', new_twelve_annex_path %>
