@@ -7,11 +7,11 @@
       <th>Numero dosis</th>
       <th>Placas</th>
       <th>Chinchos</th>
-      <th>Comprobantes cartillas</th>
-      <th>Agujas</th>
-      <th>Jeringas</th>
+      <th>Comprobantes cartillas y/o certificados</th>
+      <th>Agujas 22x32 mm</th>
+      <th>Jeringas 3 ml</th>
       <th>Thermos</th>
-      <th>Jurisdiction</th>
+      <th>Jurisdicción</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,9 +28,9 @@
         <td><%= eleven_annex.jeringas %></td>
         <td><%= eleven_annex.thermos %></td>
         <td><%= Jurisdiction.find(eleven_annex.jurisdiction_id).jurisdiction_name %></td>
-        <td><%= link_to 'Show', eleven_annex %></td>
-        <td><%= link_to 'Edit', edit_eleven_annex_path(eleven_annex) %></td>
-        <td><%= link_to 'Destroy', eleven_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', eleven_annex %></td>
+        <td><%= link_to 'Editar', edit_eleven_annex_path(eleven_annex) %></td>
+        <td><%= link_to 'Eliminar', eleven_annex, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

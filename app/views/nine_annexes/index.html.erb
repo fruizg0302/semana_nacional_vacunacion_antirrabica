@@ -3,11 +3,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Numero municipios</th>
-      <th>Numero municipios imss prospera</th>
-      <th>Universo perros imss prospera</th>
-      <th>Universo gatos imss prospera</th>
-      <th>Universo total imss prospera</th>
+      <th>No. de municipios de la jurisdicción sanitaria</th>
+      <th>Número de municipios de la jurisdicción con IMSS-Prospera</th>
+      <th>Universo de perros en municipios responsabilidad de IMSS-Prospera</th>
+      <th>Universo de gatos en municipios responsabilidad de IMSS-Prospera</th>
+      <th>Universo total en municipios responsabilidad de IMSS-Prospera</th>
       <th>Perros vacunar imss prospera</th>
       <th>Gatos vacunar imss prospera</th>
       <th>Total vacunar imss prospera</th>
@@ -28,9 +28,9 @@
         <td><%= nine_annex.gatos_vacunar_imss_prospera %></td>
         <td><%= nine_annex.total_vacunar_imss_prospera %></td>
         <td><%= Jurisdiction.find(nine_annex.jurisdiction_id).jurisdiction_name %></td>
-        <td><%= link_to 'Show', nine_annex %></td>
-        <td><%= link_to 'Edit', edit_nine_annex_path(nine_annex) %></td>
-        <td><%= link_to 'Destroy', nine_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', nine_annex %></td>
+        <td><%= link_to 'Editar', edit_nine_annex_path(nine_annex) %></td>
+        <td><%= link_to 'Eliminar', nine_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
