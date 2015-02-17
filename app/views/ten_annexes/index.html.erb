@@ -1,19 +1,19 @@
 <h1>Listado de tus capturas del Anexo 10</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Sesa personas</th>
-      <th>Estados municipios personas</th>
-      <th>Sedena semar</th>
-      <th>Sagarpa personas</th>
-      <th>Escuelas veterinarias personas</th>
-      <th>Grupos comunidad personas</th>
-      <th>Voluntarios personas</th>
-      <th>Otros personas</th>
-      <th>Imss prospera personas</th>
-      <th>Total personas</th>
-      <th>Jurisdiction</th>
+      <th>SESA</th>
+      <th>Estados y municipios</th>
+      <th>SEDENA / SEMAR</th>
+      <th>SAGARPA</th>
+      <th>Escuelas de veterinaria y/o pecuarias</th>
+      <th>Grupos de la comunidad</th>
+      <th>Voluntarios</th>
+      <th>Otros</th>
+      <th>IMSS prospera</th>
+      <th>Total</th>
+      <th>Jurisdicción</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,7 +31,7 @@
         <td><%= ten_annex.otros_personas %></td>
         <td><%= ten_annex.imss_prospera_personas %></td>
         <td><%= ten_annex.total_personas %></td>
-        <td><%= ten_annex.jurisdiction_id %></td>
+        <td><%= Jurisdiction.find(ten_annex.jurisdiction_id).jurisdiction_name %></td>
         <td><%= link_to 'Show', ten_annex %></td>
         <td><%= link_to 'Edit', edit_ten_annex_path(ten_annex) %></td>
         <td><%= link_to 'Destroy', ten_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
