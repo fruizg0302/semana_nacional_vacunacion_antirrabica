@@ -1,0 +1,54 @@
+<%= form_for(@eleven_annex) do |f| %>
+  <% if @eleven_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eleven_annex.errors.count, "error") %> prohibited this eleven_annex from being saved:</h2>
+
+      <ul>
+      <% @eleven_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero_frascos %><br>
+    <%= f.number_field :numero_frascos %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_dosis %><br>
+    <%= f.number_field :numero_dosis %>
+  </div>
+  <div class="field">
+    <%= f.label :placas %><br>
+    <%= f.number_field :placas %>
+  </div>
+  <div class="field">
+    <%= f.label :chinchos %><br>
+    <%= f.number_field :chinchos %>
+  </div>
+  <div class="field">
+    <%= f.label :comprobantes_cartillas %><br>
+    <%= f.number_field :comprobantes_cartillas %>
+  </div>
+  <div class="field">
+    <%= f.label :agujas %><br>
+    <%= f.number_field :agujas %>
+  </div>
+  <div class="field">
+    <%= f.label :jeringas %><br>
+    <%= f.number_field :jeringas %>
+  </div>
+  <div class="field">
+    <%= f.label :thermos %><br>
+    <%= f.number_field :thermos %>
+  </div>
+  <div class="field">
+    <%= f.label "Jurisdicción sanitaria" %> <br>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.find(ElevenAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Guardar Anexo 11" %>
+  </div>
+<% end %>

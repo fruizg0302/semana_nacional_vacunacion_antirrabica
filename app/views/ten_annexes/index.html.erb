@@ -1,0 +1,45 @@
+<h1>Listado de tus capturas del Anexo 10</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>SESA</th>
+      <th>Estados y municipios</th>
+      <th>SEDENA / SEMAR</th>
+      <th>SAGARPA</th>
+      <th>Escuelas de veterinaria y/o pecuarias</th>
+      <th>Grupos de la comunidad</th>
+      <th>Voluntarios</th>
+      <th>Otros</th>
+      <th>IMSS prospera</th>
+      <th>Total</th>
+      <th>Jurisdicción</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ten_annexes.each do |ten_annex| %>
+      <tr>
+        <td><%= ten_annex.sesa_personas %></td>
+        <td><%= ten_annex.estados_municipios_personas %></td>
+        <td><%= ten_annex.sedena_semar %></td>
+        <td><%= ten_annex.sagarpa_personas %></td>
+        <td><%= ten_annex.escuelas_veterinarias_personas %></td>
+        <td><%= ten_annex.grupos_comunidad_personas %></td>
+        <td><%= ten_annex.voluntarios_personas %></td>
+        <td><%= ten_annex.otros_personas %></td>
+        <td><%= ten_annex.imss_prospera_personas %></td>
+        <td><%= ten_annex.total_personas %></td>
+        <td><%= Jurisdiction.find(ten_annex.jurisdiction_id).jurisdiction_name %></td>
+        <td><%= link_to 'Show', ten_annex %></td>
+        <td><%= link_to 'Edit', edit_ten_annex_path(ten_annex) %></td>
+        <td><%= link_to 'Destroy', ten_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva captura del captura 10', new_ten_annex_path %>

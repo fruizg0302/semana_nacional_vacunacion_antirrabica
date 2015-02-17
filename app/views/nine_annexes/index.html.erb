@@ -1,0 +1,41 @@
+<h1>Listado de tus capturas del Anexo 9</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Numero municipios</th>
+      <th>Numero municipios imss prospera</th>
+      <th>Universo perros imss prospera</th>
+      <th>Universo gatos imss prospera</th>
+      <th>Universo total imss prospera</th>
+      <th>Perros vacunar imss prospera</th>
+      <th>Gatos vacunar imss prospera</th>
+      <th>Total vacunar imss prospera</th>
+      <th>Jurisdiction</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nine_annexes.each do |nine_annex| %>
+      <tr>
+        <td><%= nine_annex.numero_municipios %></td>
+        <td><%= nine_annex.numero_municipios_imss_prospera %></td>
+        <td><%= nine_annex.universo_perros_imss_prospera %></td>
+        <td><%= nine_annex.universo_gatos_imss_prospera %></td>
+        <td><%= nine_annex.universo_total_imss_prospera %></td>
+        <td><%= nine_annex.perros_vacunar_imss_prospera %></td>
+        <td><%= nine_annex.gatos_vacunar_imss_prospera %></td>
+        <td><%= nine_annex.total_vacunar_imss_prospera %></td>
+        <td><%= Jurisdiction.find(nine_annex.jurisdiction_id).jurisdiction_name %></td>
+        <td><%= link_to 'Show', nine_annex %></td>
+        <td><%= link_to 'Edit', edit_nine_annex_path(nine_annex) %></td>
+        <td><%= link_to 'Destroy', nine_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva captura del Anexo 9', new_nine_annex_path %>

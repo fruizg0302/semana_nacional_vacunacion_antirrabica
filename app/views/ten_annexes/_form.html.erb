@@ -1,0 +1,64 @@
+<%= form_for(@ten_annex) do |f| %>
+  <% if @ten_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ten_annex.errors.count, "error") %> prohibited this ten_annex from being saved:</h2>
+
+      <ul>
+      <% @ten_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="alert alert-info" role="alert">Número de personas por día e institución que participarán en los equipos de campo(1) para vacunación antirrabica</div>
+
+  <div class="field">
+    <%= f.label :sesa_personas %><br>
+    <%= f.number_field :sesa_personas %>
+  </div>
+  <div class="field">
+    <%= f.label :estados_municipios_personas %><br>
+    <%= f.number_field :estados_municipios_personas %>
+  </div>
+  <div class="field">
+    <%= f.label :sedena_semar %><br>
+    <%= f.number_field :sedena_semar %>
+  </div>
+  <div class="field">
+    <%= f.label :sagarpa_personas %><br>
+    <%= f.number_field :sagarpa_personas %>
+  </div>
+  <div class="field">
+    <%= f.label :escuelas_veterinarias_personas %><br>
+    <%= f.number_field :escuelas_veterinarias_personas %>
+  </div>
+  <div class="field">
+    <%= f.label :grupos_comunidad_personas %><br>
+    <%= f.number_field :grupos_comunidad_personas %>
+  </div>
+  <div class="field">
+    <%= f.label :voluntarios_personas %><br>
+    <%= f.number_field :voluntarios_personas %>
+  </div>
+  <div class="field">
+    <%= f.label :otros_personas %><br>
+    <%= f.number_field :otros_personas %>
+  </div>
+  <div class="field">
+    <%= f.label :imss_prospera_personas %><br>
+    <%= f.number_field :imss_prospera_personas %>
+  </div>
+  <div class="field">
+    <%= f.label :total_personas %><br>
+    <%= f.number_field :total_personas %>
+  </div>
+  <div class="field">
+    <%= f.label "Jurisdicción sanitaria" %> <br>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.find(TenAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

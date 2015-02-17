@@ -1,0 +1,50 @@
+<h1>Listado de tus capturas del Anexo 8</h1>
+
+<table class="table stripped">
+  <thead>
+    <tr>
+      <th>Perros estimados</th>
+      <th>Gatos estimados</th>
+      <th>Total estimados</th>
+      <th>Perros por vacunar</th>
+      <th>Gatos por vacunar</th>
+      <th>Total por vacunar</th>
+      <th>Perros vsn</th>
+      <th>Gatos vsn</th>
+      <th>Total vsn</th>
+      <th>Brigadas dia</th>
+      <th>Puestos fijos</th>
+      <th>Numero de dias</th>
+      <th>Jurisdiction</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    #Debugger
+    <% @eight_annexes.each do |eight_annex| %>
+      <tr>
+        <td><%= eight_annex.perros_estimados %></td>
+        <td><%= eight_annex.gatos_estimados %></td>
+        <td><%= eight_annex.total_estimados %></td>
+        <td><%= eight_annex.perros_por_vacunar %></td>
+        <td><%= eight_annex.gatos_por_vacunar %></td>
+        <td><%= eight_annex.total_por_vacunar %></td>
+        <td><%= eight_annex.perros_vsn %></td>
+        <td><%= eight_annex.gatos_vsn %></td>
+        <td><%= eight_annex.total_vsn %></td>
+        <td><%= eight_annex.brigadas_dia %></td>
+        <td><%= eight_annex.puestos_fijos %></td>
+        <td><%= eight_annex.numero_de_dias %></td>
+        <td><%= Jurisdiction.find(eight_annex.jurisdiction_id).jurisdiction_name %></td>
+        <td><%= link_to 'Mostrar', eight_annex %></td>
+        <td><%= link_to 'Editar', edit_eight_annex_path(eight_annex) %></td>
+        <td><%= link_to 'Eliminar', eight_annex, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva captura del Anexo 8', new_eight_annex_path %>

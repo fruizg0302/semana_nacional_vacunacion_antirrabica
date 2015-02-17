@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  difusion_acumulado_total: 1
+  carteles: 1
+  volantes: 1
+  folletos: 1
+  tripticos: 1
+  spots_tv: 1
+  spots_radio: 1
+  entrevistas_tv: 1
+  entrevistas_radio: 1
+  platicas: 1
+  horas_perifoneo: 1
+  cunas_periodisticas: 1
+  pinta_bardas: 1
+  mantas: 1
+  jurisdiction_id: 1
+
+two:
+  difusion_acumulado_total: 1
+  carteles: 1
+  volantes: 1
+  folletos: 1
+  tripticos: 1
+  spots_tv: 1
+  spots_radio: 1
+  entrevistas_tv: 1
+  entrevistas_radio: 1
+  platicas: 1
+  horas_perifoneo: 1
+  cunas_periodisticas: 1
+  pinta_bardas: 1
+  mantas: 1
+  jurisdiction_id: 1

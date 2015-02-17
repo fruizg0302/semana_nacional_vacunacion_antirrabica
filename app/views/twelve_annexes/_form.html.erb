@@ -1,0 +1,78 @@
+<%= form_for(@twelve_annex) do |f| %>
+  <% if @twelve_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@twelve_annex.errors.count, "error") %> prohibited this twelve_annex from being saved:</h2>
+
+      <ul>
+      <% @twelve_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :difusion_acumulado_total %><br>
+    <%= f.number_field :difusion_acumulado_total %>
+  </div>
+  <div class="field">
+    <%= f.label :carteles %><br>
+    <%= f.number_field :carteles %>
+  </div>
+  <div class="field">
+    <%= f.label :volantes %><br>
+    <%= f.number_field :volantes %>
+  </div>
+  <div class="field">
+    <%= f.label :folletos %><br>
+    <%= f.number_field :folletos %>
+  </div>
+  <div class="field">
+    <%= f.label :tripticos %><br>
+    <%= f.number_field :tripticos %>
+  </div>
+  <div class="field">
+    <%= f.label :spots_tv %><br>
+    <%= f.number_field :spots_tv %>
+  </div>
+  <div class="field">
+    <%= f.label :spots_radio %><br>
+    <%= f.number_field :spots_radio %>
+  </div>
+  <div class="field">
+    <%= f.label :entrevistas_tv %><br>
+    <%= f.number_field :entrevistas_tv %>
+  </div>
+  <div class="field">
+    <%= f.label :entrevistas_radio %><br>
+    <%= f.number_field :entrevistas_radio %>
+  </div>
+  <div class="field">
+    <%= f.label :platicas %><br>
+    <%= f.number_field :platicas %>
+  </div>
+  <div class="field">
+    <%= f.label :horas_perifoneo %><br>
+    <%= f.number_field :horas_perifoneo %>
+  </div>
+  <div class="field">
+    <%= f.label :cunas_periodisticas %><br>
+    <%= f.number_field :cunas_periodisticas %>
+  </div>
+  <div class="field">
+    <%= f.label :pinta_bardas %><br>
+    <%= f.number_field :pinta_bardas %>
+  </div>
+  <div class="field">
+    <%= f.label :mantas %><br>
+    <%= f.number_field :mantas %>
+  </div>
+  <div class="field">
+    <%= f.label "Jurisdicción sanitaria" %> <br>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.find(TwelveAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Crear captura del Anexo 12" %>
+  </div>
+<% end %>

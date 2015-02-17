@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_municipios: 1
+  numero_municipios_imss_prospera: 1
+  universo_perros_imss_prospera: 1
+  universo_gatos_imss_prospera: 1
+  universo_total_imss_prospera: 1
+  perros_vacunar_imss_prospera: 1
+  gatos_vacunar_imss_prospera: 1
+  total_vacunar_imss_prospera: 1
+  jurisdiction_id: 1
+
+two:
+  numero_municipios: 1
+  numero_municipios_imss_prospera: 1
+  universo_perros_imss_prospera: 1
+  universo_gatos_imss_prospera: 1
+  universo_total_imss_prospera: 1
+  perros_vacunar_imss_prospera: 1
+  gatos_vacunar_imss_prospera: 1
+  total_vacunar_imss_prospera: 1
+  jurisdiction_id: 1

@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_cds_dist: 1
+  numero_cd_perifoneo_dist: 1
+  numero_carteles_dist: 1
+  numero_cds_local: 1
+  numero_cd_perifoneo_local: 1
+  numero_carteles_local: 1
+  numero_estaciones_am: 1
+  numero_estaciones_fm: 1
+  total_estaciones: 1
+  promedio_impactos_dia: 1
+  fecha_inicio_difusion: 2015-02-16
+  fecha_termino_difusion: 2015-02-16
+  promedio_dias_difusion: 1
+  equipo_perifoneo_oficial: 1
+  equipo_perifoneo_privado: 1
+  equipo_perifoneo_total: 1
+  promedio_horas_difusion: 1
+  fecha_inicio_difusion_perifoneo_local: 2015-02-16
+  fecha_termino_difusion_perifoneo_local: 2015-02-16
+  promedio_dias_perifoneo: 1
+  jurisdiction_id: 1
+
+two:
+  numero_cds_dist: 1
+  numero_cd_perifoneo_dist: 1
+  numero_carteles_dist: 1
+  numero_cds_local: 1
+  numero_cd_perifoneo_local: 1
+  numero_carteles_local: 1
+  numero_estaciones_am: 1
+  numero_estaciones_fm: 1
+  total_estaciones: 1
+  promedio_impactos_dia: 1
+  fecha_inicio_difusion: 2015-02-16
+  fecha_termino_difusion: 2015-02-16
+  promedio_dias_difusion: 1
+  equipo_perifoneo_oficial: 1
+  equipo_perifoneo_privado: 1
+  equipo_perifoneo_total: 1
+  promedio_horas_difusion: 1
+  fecha_inicio_difusion_perifoneo_local: 2015-02-16
+  fecha_termino_difusion_perifoneo_local: 2015-02-16
+  promedio_dias_perifoneo: 1
+  jurisdiction_id: 1
