@@ -28,9 +28,9 @@
         <td><%= nine_annex.gatos_vacunar_imss_prospera %></td>
         <td><%= nine_annex.total_vacunar_imss_prospera %></td>
         <td><%= Jurisdiction.find(nine_annex.jurisdiction_id).jurisdiction_name %></td>
-        <td><%= link_to 'Show', nine_annex %></td>
-        <td><%= link_to 'Edit', edit_nine_annex_path(nine_annex) %></td>
-        <td><%= link_to 'Destroy', nine_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', nine_annex %></td>
+        <td><%= link_to 'Editar', edit_nine_annex_path(nine_annex) %></td>
+        <td><%= link_to 'Eliminar', nine_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
