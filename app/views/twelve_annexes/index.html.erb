@@ -1,6 +1,6 @@
-<h1>Listing twelve_annexes</h1>
+<h1>Listado de tus capturas del Anexo 12</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Difusion acumulado total</th>
@@ -39,7 +39,7 @@
         <td><%= twelve_annex.cunas_periodisticas %></td>
         <td><%= twelve_annex.pinta_bardas %></td>
         <td><%= twelve_annex.mantas %></td>
-        <td><%= twelve_annex.jurisdiction_id %></td>
+        <td><%= Jurisdiction.find(twelve_annex.jurisdiction_id).jurisdiction_name %></td>
         <td><%= link_to 'Show', twelve_annex %></td>
         <td><%= link_to 'Edit', edit_twelve_annex_path(twelve_annex) %></td>
         <td><%= link_to 'Destroy', twelve_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -50,4 +50,4 @@
 
 <br>
 
-<%= link_to 'New Twelve annex', new_twelve_annex_path %>
+<%= link_to 'Nueva captura del anexo 12', new_twelve_annex_path %>

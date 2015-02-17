@@ -1,4 +1,4 @@
-<h1>Listing thirteen_annexes</h1>
+<h1>Listado de tus capturas del Anexo 13</h1>
 
 <table>
   <thead>
@@ -51,7 +51,7 @@
         <td><%= thirteen_annex.fecha_inicio_difusion_perifoneo_local %></td>
         <td><%= thirteen_annex.fecha_termino_difusion_perifoneo_local %></td>
         <td><%= thirteen_annex.promedio_dias_perifoneo %></td>
-        <td><%= thirteen_annex.jurisdiction_id %></td>
+        <td><%= Jurisdiction.find(thirteen_annex.jurisdiction_id).jurisdiction_name %></td>
         <td><%= link_to 'Show', thirteen_annex %></td>
         <td><%= link_to 'Edit', edit_thirteen_annex_path(thirteen_annex) %></td>
         <td><%= link_to 'Destroy', thirteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>

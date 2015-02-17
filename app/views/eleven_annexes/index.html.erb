@@ -1,6 +1,6 @@
-<h1>Listing eleven_annexes</h1>
+<h1>Listado de tus capturas del Anexo 11</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Numero frascos</th>
@@ -27,7 +27,7 @@
         <td><%= eleven_annex.agujas %></td>
         <td><%= eleven_annex.jeringas %></td>
         <td><%= eleven_annex.thermos %></td>
-        <td><%= eleven_annex.jurisdiction_id %></td>
+        <td><%= Jurisdiction.find(eleven_annex.jurisdiction_id).jurisdiction_name %></td>
         <td><%= link_to 'Show', eleven_annex %></td>
         <td><%= link_to 'Edit', edit_eleven_annex_path(eleven_annex) %></td>
         <td><%= link_to 'Destroy', eleven_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Eleven annex', new_eleven_annex_path %>
+<%= link_to 'Nueva captura del anexo 11', new_eleven_annex_path %>
