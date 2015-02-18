@@ -40,9 +40,9 @@
         <td><%= twelve_annex.pinta_bardas %></td>
         <td><%= twelve_annex.mantas %></td>
         <td><%= Jurisdiction.find(twelve_annex.jurisdiction_id).jurisdiction_name %></td>
-        <td><%= link_to 'Show', twelve_annex %></td>
-        <td><%= link_to 'Edit', edit_twelve_annex_path(twelve_annex) %></td>
-        <td><%= link_to 'Destroy', twelve_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', twelve_annex %></td>
+        <td><%= link_to 'Editar', edit_twelve_annex_path(twelve_annex) %></td>
+        <td><%= link_to 'Eliminar', twelve_annex, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
