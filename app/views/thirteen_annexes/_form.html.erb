@@ -11,92 +11,113 @@
     </div>
   <% end %>
 
+  <div class="row">
+    <div class="alert alert-info" role="alert">Cantidades distribuidas</div>
+  </div>
+  <br>
+
   <div class="field">
-    <%= f.label :numero_cds_dist %><br>
+    <%= f.label "Número de CDs, mensajes de radio" %><br>
     <%= f.number_field :numero_cds_dist %>
   </div>
   <div class="field">
-    <%= f.label :numero_cd_perifoneo_dist %><br>
+    <%= f.label "Número de cds perifoneo" %><br>
     <%= f.number_field :numero_cd_perifoneo_dist %>
   </div>
   <div class="field">
-    <%= f.label :numero_carteles_dist %><br>
+    <%= f.label "Número de carteles"%><br>
     <%= f.number_field :numero_carteles_dist %>
   </div>
+  <br>
+<div class="row">
+  <div class="alert alert-info" role="alert">Cantidades reproducidas localmente</div>
+</div>
+<br>
   <div class="field">
-    <%= f.label :numero_cds_local %><br>
+    <%= f.label "Número de CDs, mensajes de radio" %><br>
     <%= f.number_field :numero_cds_local %>
   </div>
   <div class="field">
-    <%= f.label :numero_cd_perifoneo_local %><br>
+    <%= f.label "Número de cds perifoneo" %><br>
     <%= f.number_field :numero_cd_perifoneo_local %>
   </div>
   <div class="field">
-    <%= f.label :numero_carteles_local %><br>
+    <%= f.label "Número de carteles" %><br>
     <%= f.number_field :numero_carteles_local %>
   </div>
+  <br>
+<div class="row">
+  <div class="alert alert-info" role="alert">Estaciones de radio de ámbito de difusión local</div>
+</div>
+<br>
   <div class="field">
-    <%= f.label :numero_estaciones_am %><br>
+    <%= f.label "Número de estaciones am" %><br>
     <%= f.number_field :numero_estaciones_am %>
   </div>
   <div class="field">
-    <%= f.label :numero_estaciones_fm %><br>
+    <%= f.label "Número de estaciones fm"%><br>
     <%= f.number_field :numero_estaciones_fm %>
   </div>
   <div class="field">
-    <%= f.label :total_estaciones %><br>
+    <%= f.label "Total de estaciones de radio" %><br>
     <%= f.number_field :total_estaciones %>
   </div>
   <div class="field">
-    <%= f.label :promedio_impactos_dia %><br>
+    <%= f.label "Promedio impactos por día" %><br>
     <%= f.number_field :promedio_impactos_dia %>
   </div>
   <div class="field">
-    <%= f.label :fecha_inicio_difusion %><br>
+    <%= f.label "Fecha inicio de difusión" %><br>
     <%= f.date_select :fecha_inicio_difusion %>
   </div>
   <div class="field">
-    <%= f.label :fecha_termino_difusion %><br>
+    <%= f.label "Fecha de término de difusión"%><br>
     <%= f.date_select :fecha_termino_difusion %>
   </div>
   <div class="field">
-    <%= f.label :promedio_dias_difusion %><br>
+    <%= f.label "Promedio días de difusión"%><br>
     <%= f.number_field :promedio_dias_difusion %>
   </div>
+  <br>
+<div class="row">
+  <div class="alert alert-info" role="alert">Equipos de perifoneo comprometidos localmente</div>
+</div>
+<br>
   <div class="field">
-    <%= f.label :equipo_perifoneo_oficial %><br>
+    <%= f.label "Número de equipos oficiales" %><br>
     <%= f.number_field :equipo_perifoneo_oficial %>
   </div>
   <div class="field">
-    <%= f.label :equipo_perifoneo_privado %><br>
+    <%= f.label "Número de equipos privados" %><br>
     <%= f.number_field :equipo_perifoneo_privado %>
   </div>
   <div class="field">
-    <%= f.label :equipo_perifoneo_total %><br>
+    <%= f.label "Total de equipos" %><br>
     <%= f.number_field :equipo_perifoneo_total %>
   </div>
   <div class="field">
-    <%= f.label :promedio_horas_difusion %><br>
+    <%= f.label "Promedio de horas/dia de difusión" %><br>
     <%= f.number_field :promedio_horas_difusion %>
   </div>
   <div class="field">
-    <%= f.label :fecha_inicio_difusion_perifoneo_local %><br>
+    <%= f.label "Fecha de inicio de la difusión" %><br>
     <%= f.date_select :fecha_inicio_difusion_perifoneo_local %>
   </div>
   <div class="field">
-    <%= f.label :fecha_termino_difusion_perifoneo_local %><br>
+    <%= f.label "Fecha de termino de la difusión" %><br>
     <%= f.date_select :fecha_termino_difusion_perifoneo_local %>
   </div>
   <div class="field">
     <%= f.label :promedio_dias_perifoneo %><br>
     <%= f.number_field :promedio_dias_perifoneo %>
   </div>
+  <br>
   <div class="field">
     <%= f.label "Jurisdicción sanitaria" %> <br>
     <%= f.collection_select :jurisdiction_id, Jurisdiction.find(TwelveAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
   </div>
   <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar Anexo 13" %>
   </div>
 <% end %>
