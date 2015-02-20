@@ -4,7 +4,7 @@ class ThirteenAnnex < ActiveRecord::Base
   end
 
   def self.captured_jurisdictions(state_id)
-    self.find_by_sql("select ea.id, ea.jurisdiction_id from twelve_annexes as ea inner join jurisdictions as j on j.id = ea.jurisdiction_id inner join states as st on j.state_id = st.id where st.id =#{state_id} ").collect {|x| x.jurisdiction_id}
+    self.find_by_sql("select ea.id, ea.jurisdiction_id from thirteen_annexes as ea inner join jurisdictions as j on j.id = ea.jurisdiction_id inner join states as st on j.state_id = st.id where st.id =#{state_id} ").collect {|x| x.jurisdiction_id}
   end
 
   def self.available_jurisdictions(state_id)
