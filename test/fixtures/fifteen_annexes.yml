@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_municipios: 1
+  localidades_trabajadas: 1
+  logros_perros: 1
+  logros_gatos: 1
+  logros_total: 1
+  jurisdiction_id: 1
+
+two:
+  numero_municipios: 1
+  localidades_trabajadas: 1
+  logros_perros: 1
+  logros_gatos: 1
+  logros_total: 1
+  jurisdiction_id: 1

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_carteles: 1
+  numero_volantes: 1
+  numero_folletos: 1
+  numero_tripticos: 1
+  spots_radio: 1
+  spots_tv: 1
+  numero_entrevistas: 1
+  numero_platicas: 1
+  hrs_perifoneo: 1
+  cunas_periodisticas: 1
+  pinta_bardas: 1
+  mantas: 1
+  jurisdiction_id: 1
+
+two:
+  numero_carteles: 1
+  numero_volantes: 1
+  numero_folletos: 1
+  numero_tripticos: 1
+  spots_radio: 1
+  spots_tv: 1
+  numero_entrevistas: 1
+  numero_platicas: 1
+  hrs_perifoneo: 1
+  cunas_periodisticas: 1
+  pinta_bardas: 1
+  mantas: 1
+  jurisdiction_id: 1

@@ -1,0 +1,49 @@
+<h1>Listing sixteen_annexes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numero carteles</th>
+      <th>Numero volantes</th>
+      <th>Numero folletos</th>
+      <th>Numero tripticos</th>
+      <th>Spots radio</th>
+      <th>Spots tv</th>
+      <th>Numero entrevistas</th>
+      <th>Numero platicas</th>
+      <th>Hrs perifoneo</th>
+      <th>Cunas periodisticas</th>
+      <th>Pinta bardas</th>
+      <th>Mantas</th>
+      <th>Jurisdiction</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sixteen_annexes.each do |sixteen_annex| %>
+      <tr>
+        <td><%= sixteen_annex.numero_carteles %></td>
+        <td><%= sixteen_annex.numero_volantes %></td>
+        <td><%= sixteen_annex.numero_folletos %></td>
+        <td><%= sixteen_annex.numero_tripticos %></td>
+        <td><%= sixteen_annex.spots_radio %></td>
+        <td><%= sixteen_annex.spots_tv %></td>
+        <td><%= sixteen_annex.numero_entrevistas %></td>
+        <td><%= sixteen_annex.numero_platicas %></td>
+        <td><%= sixteen_annex.hrs_perifoneo %></td>
+        <td><%= sixteen_annex.cunas_periodisticas %></td>
+        <td><%= sixteen_annex.pinta_bardas %></td>
+        <td><%= sixteen_annex.mantas %></td>
+        <td><%= sixteen_annex.jurisdiction_id %></td>
+        <td><%= link_to 'Show', sixteen_annex %></td>
+        <td><%= link_to 'Edit', edit_sixteen_annex_path(sixteen_annex) %></td>
+        <td><%= link_to 'Destroy', sixteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sixteen annex', new_sixteen_annex_path %>

@@ -1,0 +1,58 @@
+<h1>Listing fourteen_annexes</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Número municipios</th>
+      <th>Número de localidades trabajadas</th>
+      <th>Logros: perros</th>
+      <th>Logros: gatos</th>
+      <th>Logros total</th>
+      <th>Porcentaje de cumplimiento</th>
+      <th>Puestos</th>
+      <th>Brigadas</th>
+      <th>Personal SESA</th>
+      <th>Personal Estado/Municipio</th>
+      <th>Personal SAGARP</th>
+      <th>Personal Escuelas: Veterinarias/Pecuarias</th>
+      <th>Personal Grupos Comunidad</th>
+      <th>Personal Voluntarios</th>
+      <th>Personal IMSS PROSPERA</th>
+      <th>Total de Personal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fourteen_annexes.each do |fourteen_annex| %>
+      <tr>
+        <td><%= fourteen_annex.numero_municipios %></td>
+        <td><%= fourteen_annex.localidades_trabajadas %></td>
+        <td><%= fourteen_annex.logros_perros %></td>
+        <td><%= fourteen_annex.logros_gatos %></td>
+        <td><%= fourteen_annex.logros_total %></td>
+        <td><%= fourteen_annex.porcentaje_cumplimiento %></td>
+        <td><%= fourteen_annex.puestos %></td>
+        <td><%= fourteen_annex.brigadas %></td>
+        <td><%= fourteen_annex.personas_sesa %></td>
+        <td><%= fourteen_annex.personas_edo_mpio %></td>
+        <td><%= fourteen_annex.personas_sagarpa %></td>
+        <td><%= fourteen_annex.personas_escuelas_vet_pec %></td>
+        <td><%= fourteen_annex.personas_gpos %></td>
+        <td><%= fourteen_annex.personas_voluntarios %></td>
+        <td><%= fourteen_annex.personas_imss_prospera %></td>
+        <td><%= fourteen_annex.otros %></td>
+        <td><%= fourteen_annex.personas_total %></td>
+        <td><%= link_to 'Show', fourteen_annex %></td>
+        <td><%= link_to 'Edit', edit_fourteen_annex_path(fourteen_annex) %></td>
+        <td><%= link_to 'Destroy', fourteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva captura anexo 14', new_fourteen_annex_path %>
+<br>
+<%= link_to 'Inicio', root_path %>

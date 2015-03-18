@@ -1,0 +1,69 @@
+<%= form_for(@sixteen_annex) do |f| %>
+  <% if @sixteen_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sixteen_annex.errors.count, "error") %> prohibited this sixteen_annex from being saved:</h2>
+
+      <ul>
+      <% @sixteen_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero_carteles %><br>
+    <%= f.number_field :numero_carteles %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_volantes %><br>
+    <%= f.number_field :numero_volantes %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_folletos %><br>
+    <%= f.number_field :numero_folletos %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_tripticos %><br>
+    <%= f.number_field :numero_tripticos %>
+  </div>
+  <div class="field">
+    <%= f.label :spots_radio %><br>
+    <%= f.number_field :spots_radio %>
+  </div>
+  <div class="field">
+    <%= f.label :spots_tv %><br>
+    <%= f.number_field :spots_tv %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_entrevistas %><br>
+    <%= f.number_field :numero_entrevistas %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_platicas %><br>
+    <%= f.number_field :numero_platicas %>
+  </div>
+  <div class="field">
+    <%= f.label :hrs_perifoneo %><br>
+    <%= f.number_field :hrs_perifoneo %>
+  </div>
+  <div class="field">
+    <%= f.label :cunas_periodisticas %><br>
+    <%= f.number_field :cunas_periodisticas %>
+  </div>
+  <div class="field">
+    <%= f.label :pinta_bardas %><br>
+    <%= f.number_field :pinta_bardas %>
+  </div>
+  <div class="field">
+    <%= f.label :mantas %><br>
+    <%= f.number_field :mantas %>
+  </div>
+  <div class="field">
+    <%= f.label :jurisdiction_id %><br>
+    <%= f.number_field :jurisdiction_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
