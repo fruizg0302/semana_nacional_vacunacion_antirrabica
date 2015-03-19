@@ -32,8 +32,8 @@
     <%= f.number_field :logros_total %>
   </div>
   <div class="field">
-    <%= f.label :jurisdiction_id, "Jurisdicción sanitaria" %><br>
-    <%= f.number_field :jurisdiction_id %>
+    <%= f.label "Jurisdicción sanitaria" %> <br>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.find(EightAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
   </div>
   <br>
   <div class="actions">

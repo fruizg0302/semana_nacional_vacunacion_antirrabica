@@ -21,7 +21,7 @@
         <td><%= fifteen_annex.logros_perros %></td>
         <td><%= fifteen_annex.logros_gatos %></td>
         <td><%= fifteen_annex.logros_total %></td>
-        <td><%= fifteen_annex.jurisdiction_id %></td>
+        <td><%= Jurisdiction.find(fifteen_annex.jurisdiction_id).jurisdiction_name %></td>
         <td><%= link_to 'Show', fifteen_annex %></td>
         <td><%= link_to 'Edit', edit_fifteen_annex_path(fifteen_annex) %></td>
         <td><%= link_to 'Destroy', fifteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>

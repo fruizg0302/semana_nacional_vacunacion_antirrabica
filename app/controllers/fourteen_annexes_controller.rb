@@ -42,6 +42,6 @@ class FourteenAnnexesController < ApplicationController
     end
 
     def fourteen_annex_params
-      params.require(:fourteen_annex).permit(:numero_municipios, :localidades_trabajadas, :logros_perros, :logros_gatos, :logros_total, :porcentaje_cumplimiento, :puestos, :brigadas, :personas_sesa, :personas_edo_mpio, :personas_sagarpa, :personas_escuelas_vet_pec, :personas_gpos, :personas_voluntarios, :personas_imss_prospera, :personas_total, :otros)
+      params.require(:fourteen_annex).permit(:numero_municipios, :localidades_trabajadas, :logros_perros, :logros_gatos, :logros_total, :porcentaje_cumplimiento, :puestos, :brigadas, :personas_sesa, :personas_edo_mpio, :personas_sagarpa, :personas_escuelas_vet_pec, :personas_gpos, :personas_voluntarios, :personas_imss_prospera, :personas_total, :otros, :jurisdiction_id)
     end
 end

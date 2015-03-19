@@ -101,7 +101,7 @@ jQuery(function() {
      "eight_annex[numero_de_dias]":{
        "required": true,
        digits: true,
-       min: 0  
+       min: 0
      }
 
    }

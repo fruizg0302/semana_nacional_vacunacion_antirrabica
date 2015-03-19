@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318164529) do
+ActiveRecord::Schema.define(version: 20150318202149) do
 
   create_table "eight_annexes", force: true do |t|
     t.integer  "perros_estimados"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20150318164529) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "otros"
+    t.integer  "jurisdiction_id"
   end
 
   create_table "jurisdictions", force: true do |t|
@@ -101,6 +102,24 @@ ActiveRecord::Schema.define(version: 20150318164529) do
     t.integer  "perros_vacunar_imss_prospera"
     t.integer  "gatos_vacunar_imss_prospera"
     t.integer  "total_vacunar_imss_prospera"
+    t.integer  "jurisdiction_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sixteen_annexes", force: true do |t|
+    t.integer  "numero_carteles"
+    t.integer  "numero_volantes"
+    t.integer  "numero_folletos"
+    t.integer  "numero_tripticos"
+    t.integer  "spots_radio"
+    t.integer  "spots_tv"
+    t.integer  "numero_entrevistas"
+    t.integer  "numero_platicas"
+    t.integer  "hrs_perifoneo"
+    t.integer  "cunas_periodisticas"
+    t.integer  "pinta_bardas"
+    t.integer  "mantas"
     t.integer  "jurisdiction_id"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -1,21 +1,21 @@
-<h1>Listing sixteen_annexes</h1>
+<h1>Listado de Anexo 16</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Numero carteles</th>
-      <th>Numero volantes</th>
-      <th>Numero folletos</th>
-      <th>Numero tripticos</th>
-      <th>Spots radio</th>
-      <th>Spots tv</th>
+      <th>Número de carteles</th>
+      <th>Número de volantes</th>
+      <th>Número de folletos</th>
+      <th>Número de tripticos</th>
+      <th>Spots de radio</th>
+      <th>Spots de tv</th>
       <th>Numero entrevistas</th>
       <th>Numero platicas</th>
       <th>Hrs perifoneo</th>
       <th>Cunas periodisticas</th>
       <th>Pinta bardas</th>
       <th>Mantas</th>
-      <th>Jurisdiction</th>
+      <th>Jurisdicción sanitaria</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,9 +36,9 @@
         <td><%= sixteen_annex.pinta_bardas %></td>
         <td><%= sixteen_annex.mantas %></td>
         <td><%= sixteen_annex.jurisdiction_id %></td>
-        <td><%= link_to 'Show', sixteen_annex %></td>
-        <td><%= link_to 'Edit', edit_sixteen_annex_path(sixteen_annex) %></td>
-        <td><%= link_to 'Destroy', sixteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', sixteen_annex %></td>
+        <td><%= link_to 'Editar', edit_sixteen_annex_path(sixteen_annex) %></td>
+        <td><%= link_to 'Borrar', sixteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -46,4 +46,6 @@
 
 <br>
 
-<%= link_to 'New Sixteen annex', new_sixteen_annex_path %>
+<%= link_to 'Nueva captura Anexo 16', new_sixteen_annex_path %>
+<br>
+<%= link_to 'Inicio', root_path %>
