@@ -17,8 +17,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'devise', '~> 3.4.1'
 gem 'mysql2', '~> 0.3.16'
 gem 'cancan', '~> 1.6.10'
-gem 'tiny_tds', '~> 0.5.1'
-gem 'activerecord-sqlserver-adapter', '~> 4.1.0'
+#gem 'tiny_tds', '~> 0.5.1'
+#gem 'activerecord-sqlserver-adapter', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-turbolinks'
