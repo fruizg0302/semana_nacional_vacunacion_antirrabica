@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numero_municipios: 1
+  localidades_trabajadas: 1
+  logros_perros: 1
+  logros_gatos: 1
+  logros_total: 1
+  porcentaje_cumplimiento: 1
+  puestos: 1
+  brigadas: 1
+  personas_sesa: 1
+  personas_edo_mpio: 1
+  personas_sagarpa: 1
+  personas_escuelas_vet_pec: 1
+  personas_gpos: 1
+  personas_voluntarios: 1
+  personas_imss_prospera: 1
+  personas_total: 1
+
+two:
+  numero_municipios: 1
+  localidades_trabajadas: 1
+  logros_perros: 1
+  logros_gatos: 1
+  logros_total: 1
+  porcentaje_cumplimiento: 1
+  puestos: 1
+  brigadas: 1
+  personas_sesa: 1
+  personas_edo_mpio: 1
+  personas_sagarpa: 1
+  personas_escuelas_vet_pec: 1
+  personas_gpos: 1
+  personas_voluntarios: 1
+  personas_imss_prospera: 1
+  personas_total: 1

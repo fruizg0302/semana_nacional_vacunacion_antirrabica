@@ -1,0 +1,71 @@
+<%= form_for(@sixteen_annex) do |f| %>
+  <% if @sixteen_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sixteen_annex.errors.count, "error") %> prohibited this sixteen_annex from being saved:</h2>
+
+      <ul>
+      <% @sixteen_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero_carteles, "Número de carteles" %><br>
+    <%= f.number_field :numero_carteles %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_volantes, "Número de volantes" %><br>
+    <%= f.number_field :numero_volantes %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_folletos, "Número de folletos" %><br>
+    <%= f.number_field :numero_folletos %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_tripticos, "Número de tripticos" %><br>
+    <%= f.number_field :numero_tripticos %>
+  </div>
+  <div class="field">
+    <%= f.label :spots_radio, "Spots en radio" %><br>
+    <%= f.number_field :spots_radio %>
+  </div>
+  <div class="field">
+    <%= f.label :spots_tv, "Spots en TV" %><br>
+    <%= f.number_field :spots_tv %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_entrevistas, "Número de entrevistas" %><br>
+    <%= f.number_field :numero_entrevistas %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_platicas, "Número de pláticas" %><br>
+    <%= f.number_field :numero_platicas %>
+  </div>
+  <div class="field">
+    <%= f.label :hrs_perifoneo, "Horas de perifoneo" %><br>
+    <%= f.number_field :hrs_perifoneo %>
+  </div>
+  <div class="field">
+    <%= f.label :cunas_periodisticas, "Cuñas Periodisticas" %><br>
+    <%= f.number_field :cunas_periodisticas %>
+  </div>
+  <div class="field">
+    <%= f.label :pinta_bardas, "Bardas pintadas" %><br>
+    <%= f.number_field :pinta_bardas %>
+  </div>
+  <div class="field">
+    <%= f.label :mantas, "Número de mantas" %><br>
+    <%= f.number_field :mantas %>
+  </div>
+  <div class="field">
+    <%= f.label :jurisdiction_id, "Jurisdicción sanitaria" %><br>
+    <%= f.number_field :jurisdiction_id %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+  <br>
+<% end %>

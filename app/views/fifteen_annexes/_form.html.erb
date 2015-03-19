@@ -1,0 +1,43 @@
+<%= form_for(@fifteen_annex) do |f| %>
+  <% if @fifteen_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fifteen_annex.errors.count, "error") %> prohibited this fifteen_annex from being saved:</h2>
+
+      <ul>
+      <% @fifteen_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero_municipios, "Número de municipios" %><br>
+    <%= f.number_field :numero_municipios %>
+  </div>
+  <div class="field">
+    <%= f.label :localidades_trabajadas, "Número de localidades trabajadas" %><br>
+    <%= f.number_field :localidades_trabajadas %>
+  </div>
+  <div class="field">
+    <%= f.label :logros_perros, "Logros: perros" %><br>
+    <%= f.number_field :logros_perros %>
+  </div>
+  <div class="field">
+    <%= f.label :logros_gatos, "Logros: gatos" %><br>
+    <%= f.number_field :logros_gatos %>
+  </div>
+  <div class="field">
+    <%= f.label :logros_total, "Logros: total" %><br>
+    <%= f.number_field :logros_total %>
+  </div>
+  <div class="field">
+    <%= f.label "Jurisdicción sanitaria" %> <br>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.find(EightAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+  <br>
+<% end %>

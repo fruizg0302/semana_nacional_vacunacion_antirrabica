@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150216172225) do
+ActiveRecord::Schema.define(version: 20150318202149) do
 
   create_table "eight_annexes", force: true do |t|
     t.integer  "perros_estimados"
@@ -45,6 +45,47 @@ ActiveRecord::Schema.define(version: 20150216172225) do
     t.datetime "updated_at"
   end
 
+  create_table "fifteen_annexes", force: true do |t|
+    t.integer  "numero_municipios"
+    t.integer  "localidades_trabajadas"
+    t.integer  "logros_perros"
+    t.integer  "logros_gatos"
+    t.integer  "logros_total"
+    t.integer  "jurisdiction_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "formularies", force: true do |t|
+    t.string   "description"
+    t.boolean  "enabled"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fourteen_annexes", force: true do |t|
+    t.integer  "numero_municipios"
+    t.integer  "localidades_trabajadas"
+    t.integer  "logros_perros"
+    t.integer  "logros_gatos"
+    t.integer  "logros_total"
+    t.integer  "porcentaje_cumplimiento"
+    t.integer  "puestos"
+    t.integer  "brigadas"
+    t.integer  "personas_sesa"
+    t.integer  "personas_edo_mpio"
+    t.integer  "personas_sagarpa"
+    t.integer  "personas_escuelas_vet_pec"
+    t.integer  "personas_gpos"
+    t.integer  "personas_voluntarios"
+    t.integer  "personas_imss_prospera"
+    t.integer  "personas_total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "otros"
+    t.integer  "jurisdiction_id"
+  end
+
   create_table "jurisdictions", force: true do |t|
     t.string   "jurisdiction_name"
     t.integer  "state_id"
@@ -61,6 +102,24 @@ ActiveRecord::Schema.define(version: 20150216172225) do
     t.integer  "perros_vacunar_imss_prospera"
     t.integer  "gatos_vacunar_imss_prospera"
     t.integer  "total_vacunar_imss_prospera"
+    t.integer  "jurisdiction_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sixteen_annexes", force: true do |t|
+    t.integer  "numero_carteles"
+    t.integer  "numero_volantes"
+    t.integer  "numero_folletos"
+    t.integer  "numero_tripticos"
+    t.integer  "spots_radio"
+    t.integer  "spots_tv"
+    t.integer  "numero_entrevistas"
+    t.integer  "numero_platicas"
+    t.integer  "hrs_perifoneo"
+    t.integer  "cunas_periodisticas"
+    t.integer  "pinta_bardas"
+    t.integer  "mantas"
     t.integer  "jurisdiction_id"
     t.datetime "created_at"
     t.datetime "updated_at"

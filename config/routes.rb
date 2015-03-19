@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :sixteen_annexes
+
+  resources :fifteen_annexes
+
+  resources :fourteen_annexes
+
   get 'registrations/new'
 
   get 'registrations/create'
