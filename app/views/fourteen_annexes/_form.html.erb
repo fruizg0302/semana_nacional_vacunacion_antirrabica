@@ -13,35 +13,35 @@
 
   <div class="field">
     <%= f.label "Número de municipios"%><br>
-    <%= f.number_field :numero_municipios %>
+    <%= f.number_field :numero_municipios, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label "Localidades trabajadas" %><br>
-    <%= f.number_field :localidades_trabajadas %>
+    <%= f.number_field :localidades_trabajadas, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label "Logros: perros" %><br>
-    <%= f.number_field :logros_perros %>
+    <%= f.number_field :logros_perros, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label "Logros: gatos" %><br>
-    <%= f.number_field :logros_gatos %>
+    <%= f.number_field :logros_gatos, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label "Total logros" %><br>
-    <%= f.number_field :logros_total %>
+    <%= f.number_field :logros_total, :readonly => true, :value => 0  %>
   </div>
   <div class="field">
     <%= f.label "Porcentaje de cumplimiento" %><br>
-    <%= f.number_field :porcentaje_cumplimiento %>
+    <%= f.number_field :porcentaje_cumplimiento , :value => 0%>
   </div>
   <div class="field">
     <%= f.label "Puestos"%><br>
-    <%= f.number_field :puestos %>
+    <%= f.number_field :puestos, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label "Brigadas" %><br>
-    <%= f.number_field :brigadas %>
+    <%= f.number_field :brigadas, :value => 0 %>
   </div>
   <br>
   <div class="row">
@@ -49,43 +49,43 @@
   </div>
   <div class="field">
     <%= f.label :personas_sesa, "SESA" %><br>
-    <%= f.number_field :personas_sesa %>
+    <%= f.number_field :personas_sesa, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :personas_edo_mpio, "Estado/Municpio" %><br>
-    <%= f.number_field :personas_edo_mpio %>
+    <%= f.number_field :personas_edo_mpio, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :personas_sagarpa, "SAGARPA" %><br>
-    <%= f.number_field :personas_sagarpa %>
+    <%= f.number_field :personas_sagarpa, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :personas_escuelas_vet_pec, "Esc. VET. y/o Pecuarias" %><br>
-    <%= f.number_field :personas_escuelas_vet_pec %>
+    <%= f.number_field :personas_escuelas_vet_pec, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :personas_gpos, "Grupos comunitarios" %><br>
-    <%= f.number_field :personas_gpos %>
+    <%= f.number_field :personas_gpos, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :personas_voluntarios, "Voluntarios" %><br>
-    <%= f.number_field :personas_voluntarios %>
+    <%= f.number_field :personas_voluntarios, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :personas_imss_prospera, "IMSS-PROSPERA" %><br>
-    <%= f.number_field :personas_imss_prospera %>
+    <%= f.number_field :personas_imss_prospera, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :otros, "Otros" %><br>
-    <%= f.number_field :otros %>
+    <%= f.number_field :otros, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label :personas_total, "Total" %><br>
-    <%= f.number_field :personas_total %>
+    <%= f.number_field :personas_total, :readonly => true, :value => 0 %>
   </div>
   <div class="field">
     <%= f.label "Jurisdicción sanitaria" %> <br>
-    <%= f.collection_select :jurisdiction_id, Jurisdiction.find(FifteenAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.find(FourteenAnnex.available_jurisdictions(current_user.state_id)), :id, :jurisdiction_name, include_blank:false%>
   </div>
   <br>
   <div class="actions">
