@@ -45,6 +45,52 @@
 </table>
 
 <br>
+<br>
+<br>
+
+
+<table class="table stripped">
+  <thead>
+    <tr>
+      <th>Perros estimados</th>
+      <th>Gatos estimados</th>
+      <th>Total estimados</th>
+      <th>Perros por vacunar</th>
+      <th>Gatos por vacunar</th>
+      <th>Total por vacunar</th>
+      <th>Perros vsn</th>
+      <th>Gatos vsn</th>
+      <th>Total vsn</th>
+      <th>Brigadas dia</th>
+      <th>Puestos fijos</th>
+      <th>Numero de dias</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eight_annexes.each do |eight_annex| %>
+      <tr>
+        <td><%= eight_annexes_total.perros_estimados %></td>
+        <td><%= eight_annexes_total.gatos_estimados %></td>
+        <td><%= eight_annexes_total.total_estimados %></td>
+        <td><%= eight_annexes_total.perros_por_vacunar %></td>
+        <td><%= eight_annexes_total.gatos_por_vacunar %></td>
+        <td><%= eight_annexes_total.total_por_vacunar %></td>
+        <td><%= eight_annexes_total.perros_vsn %></td>
+        <td><%= eight_annexes_total.gatos_vsn %></td>
+        <td><%= eight_annexes_total.total_vsn %></td>
+        <td><%= eight_annexes_total.brigadas_dia %></td>
+        <td><%= eight_annexes_total.puestos_fijos %></td>
+        <td><%= eight_annexes_total.numero_de_dias %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<br>
 
 <%= link_to 'Nueva captura del Anexo 8', new_eight_annex_path %> <br>
 
