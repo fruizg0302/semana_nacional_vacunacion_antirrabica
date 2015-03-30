@@ -72,6 +72,7 @@ GEM
     minitest (5.5.1)
     multi_json (1.10.1)
     mysql2 (0.3.17)
+    newrelic_rpm (3.7.2.195)
     orm_adapter (0.5.0)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -147,6 +148,7 @@ DEPENDENCIES
   jquery-ui-rails
   jquery-validation-rails
   mysql2 (~> 0.3.16)
+  newrelic_rpm
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
