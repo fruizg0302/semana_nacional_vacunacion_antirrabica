@@ -45,9 +45,9 @@
         <td><%= fourteen_annex.otros %></td>
         <td><%= fourteen_annex.personas_total %></td>
         <td><%= Jurisdiction.find(fourteen_annex.jurisdiction_id).jurisdiction_name %></td>
-        <td><%= link_to 'Show', fourteen_annex %></td>
-        <td><%= link_to 'Edit', edit_fourteen_annex_path(fourteen_annex) %></td>
-        <td><%= link_to 'Destroy', fourteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', fourteen_annex %></td>
+        <td><%= link_to 'Editar', edit_fourteen_annex_path(fourteen_annex) %></td>
+        <td><%= link_to 'Destruir', fourteen_annex, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

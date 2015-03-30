@@ -4,7 +4,7 @@ class SixteenAnnexesController < ApplicationController
   respond_to :html
 
   def index
-    @sixteen_annexes = SixteenAnnex.all
+    @sixteen_annexes = SixteenAnnex.state_results(current_user.state_id)
     respond_with(@sixteen_annexes)
   end
 
