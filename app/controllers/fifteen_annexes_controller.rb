@@ -4,8 +4,11 @@ class FifteenAnnexesController < ApplicationController
   respond_to :html
 
   def index
-    @fifteen_annexes = FifteenAnnex.all
+    @fifteen_annexes = FifteenAnnex.state_results(current_user.state_id)
+    #@eight_annexes_total = EightAnnex.state_total(current_user.state_id)
     respond_with(@fifteen_annexes)
+   #@fifteen_annexes = FifteenAnnex.all
+
   end
 
   def show
