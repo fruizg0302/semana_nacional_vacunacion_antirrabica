@@ -1,0 +1,95 @@
+<%= form_for(@fourteen_annex) do |f| %>
+  <% if @fourteen_annex.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fourteen_annex.errors.count, "error") %> prohibited this fourteen_annex from being saved:</h2>
+
+      <ul>
+      <% @fourteen_annex.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Número de municipios"%><br>
+    <%= f.number_field :numero_municipios, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label "Localidades trabajadas" %><br>
+    <%= f.number_field :localidades_trabajadas, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label "Logros: perros" %><br>
+    <%= f.number_field :logros_perros, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label "Logros: gatos" %><br>
+    <%= f.number_field :logros_gatos, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label "Total logros" %><br>
+    <%= f.number_field :logros_total, :readonly => true, :value => 0  %>
+  </div>
+  <div class="field">
+    <%= f.label "Porcentaje de cumplimiento" %><br>
+    <%= f.number_field :porcentaje_cumplimiento , :value => 0%>
+  </div>
+  <div class="field">
+    <%= f.label "Puestos"%><br>
+    <%= f.number_field :puestos, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label "Brigadas" %><br>
+    <%= f.number_field :brigadas, :value => 0 %>
+  </div>
+  <br>
+  <div class="row">
+    <div class="alert alert-info" role="alert">Número de personas por día e institución que participaron en los equipos de campo para la vacunación</div>
+  </div>
+  <div class="field">
+    <%= f.label :personas_sesa, "SESA" %><br>
+    <%= f.number_field :personas_sesa, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :personas_edo_mpio, "Estado/Municpio" %><br>
+    <%= f.number_field :personas_edo_mpio, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :personas_sagarpa, "SAGARPA" %><br>
+    <%= f.number_field :personas_sagarpa, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :personas_escuelas_vet_pec, "Esc. VET. y/o Pecuarias" %><br>
+    <%= f.number_field :personas_escuelas_vet_pec, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :personas_gpos, "Grupos comunitarios" %><br>
+    <%= f.number_field :personas_gpos, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :personas_voluntarios, "Voluntarios" %><br>
+    <%= f.number_field :personas_voluntarios, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :personas_imss_prospera, "IMSS-PROSPERA" %><br>
+    <%= f.number_field :personas_imss_prospera, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :otros, "Otros" %><br>
+    <%= f.number_field :otros, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :personas_total, "Total" %><br>
+    <%= f.number_field :personas_total, :readonly => true, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label "Jurisdicción sanitaria" %> <br>
+    <%= f.collection_select :jurisdiction_id, Jurisdiction.where("state_id = ?", current_user.state_id), :id, :jurisdiction_name, include_blank:false%>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Nuevo registro"%>
+  </div>
+  <br>
+<% end %>
