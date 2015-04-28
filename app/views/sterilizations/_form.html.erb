@@ -1,0 +1,45 @@
+<%= form_for(@sterilization) do |f| %>
+  <% if @sterilization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sterilization.errors.count, "error") %> prohibited this sterilization from being saved:</h2>
+
+      <ul>
+      <% @sterilization.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :municipality %><br>
+    <%= f.text_field :municipality %>
+  </div>
+  <div class="field">
+    <%= f.label :surgery_date %><br>
+    <%= f.date_select :surgery_date %>
+  </div>
+  <div class="field">
+    <%= f.label :species_id %><br>
+    <%= f.number_field :species_id %>
+  </div>
+  <div class="field">
+    <%= f.label :genre_id %><br>
+    <%= f.number_field :genre_id %>
+  </div>
+  <div class="field">
+    <%= f.label :age_group_id %><br>
+    <%= f.number_field :age_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :vaccine %><br>
+    <%= f.check_box :vaccine %>
+  </div>
+  <div class="field">
+    <%= f.label :establishment_id %><br>
+    <%= f.number_field :establishment_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

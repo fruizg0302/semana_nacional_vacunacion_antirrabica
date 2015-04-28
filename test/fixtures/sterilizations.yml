@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  municipality: MyString
+  surgery_date: 2015-04-23
+  species_id: 1
+  genre_id: 1
+  age_group_id: 1
+  vaccine: false
+  establishment_id: 1
+
+two:
+  municipality: MyString
+  surgery_date: 2015-04-23
+  species_id: 1
+  genre_id: 1
+  age_group_id: 1
+  vaccine: false
+  establishment_id: 1

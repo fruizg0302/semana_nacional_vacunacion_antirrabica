@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Municipality:</strong>
+  <%= @sterilization.municipality %>
+</p>
+
+<p>
+  <strong>Surgery date:</strong>
+  <%= @sterilization.surgery_date %>
+</p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @sterilization.species_id %>
+</p>
+
+<p>
+  <strong>Genre:</strong>
+  <%= @sterilization.genre_id %>
+</p>
+
+<p>
+  <strong>Age group:</strong>
+  <%= @sterilization.age_group_id %>
+</p>
+
+<p>
+  <strong>Vaccine:</strong>
+  <%= @sterilization.vaccine %>
+</p>
+
+<p>
+  <strong>Establishment:</strong>
+  <%= @sterilization.establishment_id %>
+</p>
+
+<%= link_to 'Edit', edit_sterilization_path(@sterilization) %> |
+<%= link_to 'Back', sterilizations_path %>

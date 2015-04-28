@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sterilizations
+
   resources :sixteen_annexes
 
   resources :fifteen_annexes

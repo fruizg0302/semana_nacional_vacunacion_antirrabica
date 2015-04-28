@@ -1,0 +1,37 @@
+<h1>Listing sterilizations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Municipality</th>
+      <th>Surgery date</th>
+      <th>Species</th>
+      <th>Genre</th>
+      <th>Age group</th>
+      <th>Vaccine</th>
+      <th>Establishment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sterilizations.each do |sterilization| %>
+      <tr>
+        <td><%= sterilization.municipality %></td>
+        <td><%= sterilization.surgery_date %></td>
+        <td><%= sterilization.species_id %></td>
+        <td><%= sterilization.genre_id %></td>
+        <td><%= sterilization.age_group_id %></td>
+        <td><%= sterilization.vaccine %></td>
+        <td><%= sterilization.establishment_id %></td>
+        <td><%= link_to 'Show', sterilization %></td>
+        <td><%= link_to 'Edit', edit_sterilization_path(sterilization) %></td>
+        <td><%= link_to 'Destroy', sterilization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sterilization', new_sterilization_path %>

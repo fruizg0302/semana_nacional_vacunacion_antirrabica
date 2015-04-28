@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318202149) do
+ActiveRecord::Schema.define(version: 20150423172921) do
 
   create_table "eight_annexes", force: true do |t|
     t.integer  "perros_estimados"
@@ -130,6 +130,18 @@ ActiveRecord::Schema.define(version: 20150318202149) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "imss_prospera"
+  end
+
+  create_table "sterilizations", force: true do |t|
+    t.string   "municipality"
+    t.date     "surgery_date"
+    t.integer  "species_id"
+    t.integer  "genre_id"
+    t.integer  "age_group_id"
+    t.boolean  "vaccine"
+    t.integer  "establishment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "ten_annexes", force: true do |t|
